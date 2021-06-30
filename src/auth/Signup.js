@@ -17,6 +17,8 @@ const Signup = (props) => {
             (response) => response.json()
         ).then((data) => {
             props.updateToken(data.sessionToken)
+        }).catch(err => {
+            console.log(err);
         })
     }
 

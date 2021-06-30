@@ -19,6 +19,8 @@ const WorkoutIndex = (props) => {
         }).then((res) => res.json())
         .then((logData) => {
             setWorkouts(logData)
+        }).catch(err => {
+            console.log(err);
         })
     }
 
